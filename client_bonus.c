@@ -6,7 +6,7 @@
 /*   By: bsouhar <bsouhar@student.1337.ma>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/12 06:58:07 by bsouhar           #+#    #+#             */
-/*   Updated: 2023/02/23 17:22:50 by bsouhar          ###   ########.fr       */
+/*   Updated: 2023/03/06 20:10:48 by bsouhar          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,9 +41,10 @@ void	send_char(int pid, char *str)
 	send_message(pid, '\0');
 }
 
-void	print_message()
+void	print_message(int signum)
 {
-	ft_printf("%s", "message recieved");
+	(void)signum;
+	ft_printf("message recieved");
 }
 
 int	ft_check_valid_pid(char *str)
